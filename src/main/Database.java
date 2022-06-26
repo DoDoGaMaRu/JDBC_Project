@@ -114,11 +114,11 @@ public class Database {
         String sbjName;
         int scId;
 
-        screen.displayMessage("Enter Subject ID : ");
+        screen.displayMessage(Message.INPUT_SUBJECT_NUMBER);
         sbjId = keypad.getInt();
-        screen.displayMessage("Enter Subject Name : ");
+        screen.displayMessage(Message.INPUT_SUBJECT_NAME);
         sbjName = keypad.getString();
-        screen.displayMessage("Enter Seperated Class ID : ");
+        screen.displayMessage(Message.INPUT_DIVIDE_CLASS_NUMBER);
         scId = keypad.getInt();
 
         if (transaction.insertSubject(sbjId, sbjName, scId)) {
@@ -135,13 +135,13 @@ public class Database {
         int sbjId;
         String grade;
 
-        screen.displayMessage("Enter Student ID : ");
+        screen.displayMessage(Message.INPUT_STUDENT_ID);
         stdId = keypad.getInt();
-        screen.displayMessage("Enter Subject ID : ");
+        screen.displayMessage(Message.INPUT_SUBJECT_NUMBER);
         sbjId = keypad.getInt();
-        screen.displayMessage("Enter Seperated Class Name : ");
+        screen.displayMessage(Message.INPUT_DIVIDE_CLASS_NUMBER);
         scId = keypad.getInt();
-        screen.displayMessage("Enter Grade : ");
+        screen.displayMessage(Message.INPUT_GRADE);
         grade = keypad.getString();
 
         if (transaction.insertSignUp(stdId, scId, sbjId, grade)) {
@@ -158,14 +158,14 @@ public class Database {
         int newSbjId;
         int oldSbjId;
 
-        screen.displayMessage("Enter Student ID : ");
+        screen.displayMessage(Message.INPUT_STUDENT_ID);
         stdId = keypad.getInt();
-        screen.displayMessage("Enter New Seperated Class ID : ");
-        newScId = keypad.getInt();
-        screen.displayMessage("Enter New Subject ID : ");
-        newSbjId = keypad.getInt();
-        screen.displayMessage("Enter Old Subject ID : ");
+        screen.displayMessage(Message.INPUT_OLD_SUBJECT_NUMBER);
         oldSbjId = keypad.getInt();
+        screen.displayMessage(Message.INPUT_NEW_SUBJECT_NUMBER);
+        newSbjId = keypad.getInt();
+        screen.displayMessage(Message.INPUT_DIVIDE_CLASS_NUMBER);
+        newScId = keypad.getInt();
 
         transaction.updateSignUp(stdId, newScId, newSbjId, oldSbjId);
         screen.displayMessageLine(Message.CHANGE_SUCCESS);

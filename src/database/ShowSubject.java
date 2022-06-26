@@ -13,12 +13,12 @@ public class ShowSubject {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
-            sb.append("Subject Id\tSubject Name\n");
+            sb.append("\t\t과목번호\t과목이름\n");
             while(rs.next()) {
                 String subjectId = rs.getString("subjectId");
                 String subjectName = rs.getString("subjectName");
 
-                sb.append(subjectId + "\t" + subjectName);
+                sb.append("\t\t" + subjectId + "\t\t" + subjectName);
                 sb.append("\n\n");
             }
         }

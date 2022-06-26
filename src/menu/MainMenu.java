@@ -11,12 +11,12 @@ public class MainMenu {
 
     // display main menu and get user command
     public int displayMainMenu(Screen screen, Keypad keypad) {
-        screen.displayMessageLine( "\n\t\t MENU:\n" );
-        screen.displayMessageLine( "\t\t1 - Subject Registration" );
-        screen.displayMessageLine( "\t\t2 - move to signup" );
-        screen.displayMessageLine( "\t\t3 - move to search" );
-        screen.displayMessageLine( "\t\t4 - exit" );
-        screen.displayMessage( "\tChoice: " );
+        screen.displayMessageLine( "\n\t\t 메뉴:\n" );
+        screen.displayMessageLine( "\t\t1 - 과목(개설강좌) 등록" );
+        screen.displayMessageLine( "\t\t2 - 수강신청으로 이동" );
+        screen.displayMessageLine( "\t\t3 - 자료조회로 이동" );
+        screen.displayMessageLine( "\t\t4 - 종료" );
+        screen.displayMessage( "\t선택하세요: " );
         return keypad.getInt();
     }
 }

@@ -10,11 +10,11 @@ public class SignupMenu {
     public static final int EXIT = 4;
 
     public int displaySignupMenu(Screen screen, Keypad keypad) {
-        screen.displayMessageLine( "\n\t\t MENU:\n" );
-        screen.displayMessageLine( "\t\t1 - SIGNUP" );
-        screen.displayMessageLine( "\t\t2 - SIGNUP CHANGE" );
-        screen.displayMessageLine( "\t\t3 - BACK" );
-        screen.displayMessage( "\tChoice: " );
+        screen.displayMessageLine( "\n\t\t 메뉴:\n" );
+        screen.displayMessageLine( "\t\t1 - 수강신청" );
+        screen.displayMessageLine( "\t\t2 - 수강신청 변경" );
+        screen.displayMessageLine( "\t\t3 - 뒤로가기" );
+        screen.displayMessage( "\t선택하세요: " );
         return keypad.getInt();
     }
 }
